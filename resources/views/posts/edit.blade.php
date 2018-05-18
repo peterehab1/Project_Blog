@@ -1,0 +1,1 @@
+It's all done and the post is deletede
