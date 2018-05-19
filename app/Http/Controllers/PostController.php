@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
+use App\User;
 use Session;
 use Auth;
 
@@ -43,6 +45,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $post = new Post;
+        
         $this->validate($request, array(
             'title' => 'required',
             'body' => 'required',
@@ -63,7 +67,7 @@ class PostController extends Controller
         
 
 
-        $post = new Post;
+        
         $post->title = $request->title;
         $post->body = $request->body;
 
@@ -88,8 +92,12 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        
         $post = Post::find($id);
-        return view('posts.show', compact('post', $post));
+        $comments = Comment::all()->where('post_id', $id);
+        $count = Comment::all()->where('post_id', $id)->count();
+    return view('posts.show', compact('post', $post, 'comments', $comments, 'count', $count));
+
     }
 
     /**

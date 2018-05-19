@@ -72,9 +72,7 @@
                 
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('/about')}}" id="navbarDropdownMenuLinkShop">About Bloggers</a>
-                        </li>
+                        
 
                         @guest
                         <li class="nav-item">

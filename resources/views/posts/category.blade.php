@@ -10,7 +10,7 @@ Create New Post
                   <div class="col-md-6 col-lg-4">
                         <article>
                             <div class="post_img">
-                                <img src="images/32.jpg" alt="Card image cap">
+                                <img src="{{ asset('images/uploads/'.$p->picture.'') }}" alt="Card image cap">
                             </div>
                             <h5 class="post_title">
                                 <a href="blog-single-post.html">{{ $p->title }}</a>
@@ -19,7 +19,7 @@ Create New Post
                                 <span class="post_meta_category">
                                     <a href="blog-single-post.html">{{$p->category->name}}</a>
                                 </span>
-                                <span class="post_meta_date">{{$p->created_at}}</span>
+                                <span class="post_meta_date">{{$p->created_at}}</span><span>By : {{ $p->user->name }}</span>
                             </div>
                             <div class="post_content">
                                 <p>{{ substr($p->body, 0, 150) }}<a href="{{route('post.show', $p->id)}}"> [Read More]</a></p>

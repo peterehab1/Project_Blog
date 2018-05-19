@@ -1,1 +1,0 @@
-<h1>You are peter and you are in this page and you logged</h1>

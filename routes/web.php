@@ -12,8 +12,8 @@
 */
 
 Route::get('/', 'PageController@index');
-Route::get('/about', 'PageController@about');
 Route::resource('/post', 'PostController');
+Route::resource('/comment', 'CommentController');
 Auth::routes();
 Route::get('/category/{id}', 'CategoryController@index');
 Route::get('/user/{id}', 'PageController@getUser');

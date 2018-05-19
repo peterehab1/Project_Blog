@@ -30,7 +30,7 @@
                             </div>
                             <h5 class="post_title">
                                 <a href="{{route('post.show', $p->id)}}">{{ $p->title }}</a>
-                                <p>{{ Auth::id() }}</p>
+                                
                             </h5>
                             <div class="post_meta_top">
                                 <span class="post_meta_category">
@@ -42,7 +42,7 @@
                                 <span class="post_meta_date">{{ $p->created_at }}</span>
                             </div>
                             <div class="post_content">
-                                <p>{{ substr($p->body, 0, 150) }} <a href="{{route('post.show', $p->id)}}"> [Read More]</a></p>
+                                <p>{{ substr($p->body, 0, 90) }} <a href="{{route('post.show', $p->id)}}"> [Read More]</a></p>
                             </div>
                         </article>
                     </div>
@@ -57,7 +57,7 @@
                 <div class="container">
                     <div class="row small-gutters align-items-center mb-20px">
                         <div class="col-lg-5">
-                            <h4 class="mb-15px">Subscribe To The Newsletter</h4>
+                            <h4 class="mb-15px">Get In Touch</h4>
                             <p>Lorem ipsum quis bibendum auct or de suis erestopius proin qual de suis erestopius liqueenean
                                 sollicituin. Oratio pertinax, id his aliquam habemus tractatos. </p>
                         </div>
@@ -77,52 +77,7 @@
                 </div>
             </div>
 
-            <!-- footer  -->
-            <footer class="web-footer footer bg-color-blackflame all-text-content-white">
-                <div class="footer-widgets pt-85px pb-55px">
-                    <div class="container">
-                        <div class="row large-gutters">
-                            <div class="col-lg-5 mb-30px">
-                                <div class="footer-widget">
-                                    <h3>Blog</h3>
-                                    <p class="pt-20px pt-lg-155px">© 2018 Peter Ehab</p>
-                                </div>
-                            </div>
-                            
-                            <div class="col-lg-3 mb-30px">
-                                <div class="footer-widget">
-                                    <h5 class="widget-title">Contact us</h5>
-                                    
-                                    <p>petereroshdy@gmail.com</p>
-                                    <ul class="list-inline m-0">
-                                        <li class="list-inline-item">
-                                            <a href="https://www.facebook.com/energeticthemes">
-                                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="https://instagram.com/energeticthemes"> 
-                                                
-                                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="https://behance.com/energeticthemes">
-                                                <i class="fab fa-behance" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="https://twitter.com/energeticthemes">
-                                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            
         </div>
         <!-- End main -->
    @endsection

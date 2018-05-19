@@ -26,13 +26,13 @@
 
                       </div>
                       @foreach($posts as $post)
-                      <div class="col-lg-12">
+                      <div class="col-lg-4">
                         
                             
                             
                             <div class="backBone">
                             <span>{{$post->title}}</span><br>
-                            <p>{{ substr($post->body, 0, 150) }} <a href="{{route('post.show', $post->id)}}"> [Read More]</a></p>
+                            <p>{{ substr($post->body, 0, 50) }} <a href="{{route('post.show', $post->id)}}"> [Read More]</a></p>
                             
                             @if(Auth::id() == $post->user_id)
                             <form action="{{ route('post.destroy', $post->id) }}" method="POST">
